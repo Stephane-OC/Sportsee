@@ -1,0 +1,203 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+header {
+    display: flex;
+    background-color: black;
+}
+
+header img {
+    padding: 1rem 0 1rem 2rem;
+    max-height: 4rem;
+}
+
+nav {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    color: white;
+}
+
+.dashboard {
+    width: 90%;
+    float: right;
+}
+
+.userLabel {
+    margin-top: 3rem;
+    margin-left: 5rem;
+}
+
+.highlightName {
+    color: red;
+}
+
+/* ************** ************** ************** */
+
+/* ************** Sport Graphic Section ************** */
+.statsBox,
+.scoreBox,
+.nutriscore,
+.nutriscore div {
+    display: flex;
+    margin-top: -10px;
+}
+
+.chartbar {
+    padding: 2rem 1rem 1rem 1rem;
+    margin: 2.1rem 1.1rem 1.1rem 1.1rem;
+    width: 90%;
+    height: 300px;
+    background-color: #FBFBFB;
+    border-radius: 10px;
+}
+
+.scoreBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+article {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ************** ************** ************** */
+
+/* ************** Sport Graphic Section ************** */
+.linechart,
+.chartradar,
+.chartPie {
+    font-weight: 600;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 0 0.7rem 0 1.6rem;
+}
+
+.linechart {
+    background-color: red;
+    text-align: center;
+}
+
+.chartradar {
+    background-color: #282D30;
+    text-align: center;
+}
+
+.chartPie {
+    background-color: #FBFBFB;
+    text-align: center;
+}
+
+.linechart .description {
+    width: 60%;
+    margin: 2rem;
+    color: white;
+    opacity: 0.6;
+}
+
+/* ************** ************** ************** */
+
+/* ************** nutritionRating ************** */
+
+.nutritionRating {
+    flex-direction: column;
+    align-items: baseline;
+    row-gap: 4rem;
+    margin-right: 1rem;
+    margin-top: 1.4em;
+}
+
+.nutritionRating p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.nutritionRating span {
+    font-weight: lighter;
+    font-size: 0.9rem;
+    color: #74798C;
+}
+
+.nutritionRating div {
+    padding: 1rem;
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 20px;
+    background-color: #FBFBFB;
+}
+
+.nutritionRating img {
+    width: 30%;
+    margin-right: 2rem;
+}
+
+.nutritionInfo {
+    background-color: #FBFBFB;
+    padding: 1rem;
+    margin-bottom: 2.7em;
+    border-radius: 10px;
+}
+
+/* ************** ************** ************** */
+
+/* ************** Error Page ************** */
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ff0101;
+}
+
+.error h1 {
+    width: fit-content;
+    margin: 0;
+    font-size: 16rem;
+    font-weight: 700;
+}
+
+.error h2 {
+    font-size: 2rem;
+    max-width: 70%;
+    text-align: center;
+    color: #282D30;
+}
+
+.error p {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    text-decoration: underline;
+    color: #282D30;
+}
+
+/* ************** ************** ************** */

@@ -3,15 +3,21 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Header from './assets/components/Header';
+import Header from './assets/components/Header/Header';
+import SideBar from './assets/components/SideBar/SideBar';
+import Error from './assets/pages/PageError';
 import FrontPage from './assets/pages/FrontPage';
+import PageUser from './assets/pages/PageUser';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
       <Header/>
+      <SideBar/>
       <Routes>
+        <Route exact path="/user/:id" element={<PageUser/>}/>
+        <Route path="*" element={<Error/>}/>
         <Route exact path="/" element={<FrontPage/>}/>
       </Routes>
     </Router>
