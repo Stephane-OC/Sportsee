@@ -201,3 +201,55 @@ article {
 }
 
 /* ************** ************** ************** */
+
+/* ************** User Choice ************** */
+.choice-container {
+    display: flex;
+    text-align: center;
+    margin-top: 20rem;
+    font-size: 36px;
+}
+
+.choice-container a {
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #FFFFFF
+}
+
+.choice-container p:hover {
+    animation: bounce 0.5s;
+}
+
+.choice-container p {
+    padding: 0.6rem;
+    width: 150px;
+    margin: 2rem auto;
+    background-color: #E60000;
+    border: 1px solid #FFFFFF;
+    border-radius: 50px;
+}
+
+/* ************** ************** ************** */
+
+/* ************** Keyframes Animation ************** */
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ************** ************** ************** */

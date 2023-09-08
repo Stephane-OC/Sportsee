@@ -1,5 +1,5 @@
 import logo from '../../img/logo-sportsee.png'
-import '../../main.css'
+import '../../pages/main.css'
 
 /* Header component renders a top navigation bar with SportSee logo and a set of menu items. **
 **                                                                                           **
