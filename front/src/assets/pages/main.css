@@ -51,8 +51,9 @@ nav ul {
 }
 
 .userLabel {
-    margin-top: 3rem;
-    margin-left: 5rem;
+    margin-top: -0.4rem;
+    margin-bottom: -1.8rem;
+    margin-left: 3rem;
 }
 
 .highlightName {
@@ -72,7 +73,7 @@ nav ul {
 
 .chartbar {
     padding: 2rem 1rem 1rem 1rem;
-    margin: 2.1rem 1.1rem 1.1rem 1.1rem;
+    margin: 1.8rem 1.1rem 1.1rem 1.1rem;
     width: 90%;
     height: 300px;
     background-color: #FBFBFB;
@@ -82,8 +83,11 @@ nav ul {
 .scoreBox {
     display: flex;
     flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
     row-gap: 1rem;
 }
+
 
 article {
     display: flex;
@@ -96,11 +100,15 @@ article {
 .linechart,
 .chartradar,
 .chartPie {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
     font-weight: 600;
     width: 200px;
     height: 200px;
     border-radius: 10px;
-    margin: 0 0.7rem 0 1.6rem;
+    margin: 0 0.7rem 0 1.4rem;
 }
 
 .linechart {
@@ -115,7 +123,22 @@ article {
 
 .chartPie {
     background-color: #FBFBFB;
-    text-align: center;
+
+    .recharts-surface{
+        width: 80%;
+        height: 85%;
+        padding: 0 0rem;
+        margin-top: -1rem;
+        margin-left: -1rem;
+    }
+
+    .recharts-wrapper{
+        height: 185px;
+    }
+}
+
+.chartPie p{
+    margin-top: -1rem;
 }
 
 .linechart .description {
@@ -123,6 +146,14 @@ article {
     margin: 2rem;
     color: white;
     opacity: 0.6;
+}
+
+.bar-marker{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: red;
+    color: white;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
 }
 
 /* ************** ************** ************** */
@@ -158,14 +189,14 @@ article {
 }
 
 .nutritionRating img {
-    width: 30%;
+    width: 36%;
     margin-right: 2rem;
 }
 
 .nutritionInfo {
     background-color: #FBFBFB;
     padding: 1rem;
-    margin-bottom: 2.7em;
+    margin-bottom: 1.7em;
     border-radius: 10px;
 }
 

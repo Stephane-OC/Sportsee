@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 
-import kcal from '../img/kcal.png';
-import Protein from '../img/Protein.png';
-import lipids from '../img/lipids.png';
-import carbs from '../img/carbs.png';
-import getData from '../service/MockedService';
-
-import '../pages/main.css';
 import BarStats from '../components/ChartBar';
 import LineStats from '../components/ChartLine';
 import RadarStats from '../components/ChartRadar';
 import PieStats from '../components/StatsPie';
+
+import kcal from '../img/kcal.png';
+import Protein from '../img/Protein.png';
+import lipids from '../img/lipids.png';
+import carbs from '../img/carbs.png';
+
+import '../pages/main.css';
+
+
+import getData from '../service/MockedService';
 
 /* FrontPage component serves as main dashboard for displaying various statistics and information. **
 **                                                                                                 **
@@ -78,19 +81,19 @@ function PageUser() {
               
               <article className='nutritionInfo'>
                 <img src={kcal} alt='Calories'/>
-                <p>Calories<br/><span>Calories</span></p>
+                <p>{data.keyData.calorieCount + "kcal"}<br/><span>Calories</span></p>
               </article>
               <article className='nutritionInfo'>
                 <img src={Protein} alt='Proteines'/>
-                <p>Proteines<br/><span>Proteines</span></p>
+                <p>{data.keyData.proteinCount + "mg"}<br/><span>Proteines</span></p>
               </article>
               <article className='nutritionInfo'>
                 <img src={carbs} alt='Glucides'/>
-                <p>Glucides<br/><span>Glucides</span></p>
+                <p>{data.keyData.carbohydrateCount + "mg"}<br/><span>Glucides</span></p>
               </article>
               <article className='nutritionInfo'>
                 <img src={lipids} alt='Lipides'/>
-                <p>Lipides<br/><span>Lipides</span></p>
+                <p>{data.keyData.lipidCount + "mg"}<br/><span>Lipides</span></p>
               </article>
             </section>
 
