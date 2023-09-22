@@ -13,7 +13,7 @@ import carbs from '../img/carbs.png';
 
 import '../pages/main.css';
 
-import getData from '../service/MockedService';
+import getData from '../service/ApiService';
 
 /* FrontPage component serves as main dashboard for displaying various statistics and information. **
 **                                                                                                 **

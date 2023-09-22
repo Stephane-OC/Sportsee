@@ -1,8 +1,7 @@
 import PropTypes from "prop-types"
 import React, { useState, useEffect } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
-import getData from '../service/MockedService';
-//import getData from '../service/ApiService';
+import getData from '../service/ApiService';
 
 /* RadarStats component is designed to render a RadarChart visualization for performance data.  **
 **                                                                                              **

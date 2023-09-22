@@ -10,7 +10,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import getData from '../service/MockedService';
+import getData from '../service/ApiService';
 
 /* BarStats component is designed to render a BarChart visualization for activity data.  **
 **                                                                                       **
