@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
-import getData from "../service/MockedService";
+import getData from '../service/ApiService';
 
 /* LineStats component is designed to render a LineChart visualization for average session durations. **
 **                                                                                                    **

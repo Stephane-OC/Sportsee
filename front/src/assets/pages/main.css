@@ -64,14 +64,12 @@ nav ul {
 
 /* ************** Sport Graphic Section ************** */
 .statsBox,
-.scoreBox,
-.nutriscore,
-.nutriscore div {
+.scoreBox {
     display: flex;
     margin-top: -10px;
 }
 
-.chartbar {
+.barchart {
     padding: 2rem 1rem 1rem 1rem;
     margin: 1.8rem 1.1rem 1.1rem 1.1rem;
     width: 90%;
@@ -105,10 +103,11 @@ article {
     align-items: center; 
     justify-content: center;
     font-weight: 600;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 10px;
     margin: 0 0.7rem 0 1.4rem;
+    padding: 0.5rem;
 }
 
 .linechart {
@@ -125,11 +124,11 @@ article {
     background-color: #FBFBFB;
 
     .recharts-surface{
-        width: 80%;
+        width: 70%;
         height: 85%;
         padding: 0 0rem;
-        margin-top: -1rem;
-        margin-left: -1rem;
+        margin-top: -1.4rem;
+        margin-left: -0.7rem;
     }
 
     .recharts-wrapper{
@@ -143,7 +142,7 @@ article {
 
 .linechart .description {
     width: 60%;
-    margin: 2rem;
+    margin: 1.2rem;
     color: white;
     opacity: 0.6;
 }
@@ -165,7 +164,7 @@ article {
     align-items: baseline;
     row-gap: 4rem;
     margin-right: 1rem;
-    margin-top: 1.4em;
+    margin-top: 2em;
 }
 
 .nutritionRating p {
@@ -189,7 +188,7 @@ article {
 }
 
 .nutritionRating img {
-    width: 36%;
+    width: 40%;
     margin-right: 2rem;
 }
 
@@ -283,4 +282,24 @@ article {
     }
 }
 
-/* ************** ************** ************** */
+/* ************** Responsive ************** */
+
+@media (min-width: 1281px) {
+    .barchart {
+        padding: 2rem 1rem 1rem 1rem;
+        margin: 4rem 1.1rem 1.1rem 1.1rem;
+        width: 90%;
+        height: 300px;
+        background-color: #FBFBFB;
+        border-radius: 10px;
+    }
+
+    .nutritionRating {
+        margin-left: -6rem;
+        margin-top: 5em;
+    }
+    .nutritionRating img {
+        width: 36%;
+        margin-right: 2rem;
+    }
+}
