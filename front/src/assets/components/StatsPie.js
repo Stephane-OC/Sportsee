@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Label } from "recharts";
-import getData from '../service/ApiService';
+import getData from '../service/MockedService';
 
 /* PieStats component is designed to render a PieChart visualization for score data.   **
 **                                                                                     **
