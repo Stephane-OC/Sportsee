@@ -1,13 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import Header from './assets/components/Header/Header';
-import SideBar from './assets/components/SideBar/SideBar';
-import Error from './assets/pages/PageError';
-import FrontPage from './assets/pages/FrontPage';
-import PageUser from './assets/pages/PageUser';
+import React, { useEffect } from 'react';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import Header from "./assets/components/Header/Header";
+import SideBar from "./assets/components/SideBar/SideBar";
+import FrontPage from "./assets/pages/FrontPage";
+import Error from "./assets/pages/PageError";
+
+function RedirectToUser12() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/user/12');
+  }, [navigate]);
+
+  return null;
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,9 +25,10 @@ root.render(
       <Header/>
       <SideBar/>
       <Routes>
-        <Route exact path="/user/:id" element={<PageUser/>}/>
+        <Route exact path="/user/:id" element={<FrontPage/>}/>
+        <Route path="/error" element={<Error/>}/>
+        <Route path="/" element={<RedirectToUser12 />} />
         <Route path="*" element={<Error/>}/>
-        <Route exact path="/" element={<FrontPage/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
