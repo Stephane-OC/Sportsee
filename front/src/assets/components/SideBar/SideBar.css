@@ -22,3 +22,9 @@ aside img {
     margin: 0.5rem 2rem 0.5rem 2rem;
     width: 3rem;
 }
+
+@media (max-width: 1281px) {
+    aside p {
+        top: 5rem;
+    }
+}
