@@ -13,7 +13,7 @@ import carbs from '../img/carbs.png';
 
 import '../pages/main.css';
 
-import getData from '../service/MockedService'
+import getData from "../service/MockedService";
 
 /* FrontPage component serves as main dashboard for displaying various statistics and information. **
 **                                                                                                 **
@@ -54,19 +54,29 @@ function FrontPage() {
     const call = new getData(id);
     call.getData(id, '')
     .then(function (res){
-      setData(res);
-      setIsLoading(false);
+      if (res && res.keyData) {
+        setData(res);
+        setIsLoading(false);
+      } else {
+        console.log("Data is not valid. Redirecting to error page.");
+        navigate('/Error');
+      }
     })
     .catch(function(err){
       console.log('An error occurred', err);
+      navigate('/Error');
     });
-  }, [id, isLoading]);
+  }, [id, navigate, isLoading]);
 
   console.log("Checking data:", data);
-  if (!data || data === undefined) {
-    navigate('/Error');
-    return null;
-  }
+
+  useEffect(() => {
+    if (!isLoading && (!data || !data.keyData)) {
+      console.log("Data or keyData is missing. Redirecting to error page.");
+      navigate('/Error');
+    }
+  }, [data, navigate, isLoading]);
+
 
   return (
     <>{!isLoading && (
