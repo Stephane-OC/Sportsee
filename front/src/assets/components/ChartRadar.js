@@ -59,7 +59,8 @@ function RadarStats({ id }) {
       <div className='chartradar'>
         <ResponsiveContainer width="100%" aspect={1}>
           <RadarChart cx="50%" cy="50%" outerRadius="65%" data={processedData}>
-            <PolarGrid />
+            { /* Only display circular grids (octagons) and hide radial lines for a cleaner look */}
+            <PolarGrid radialLines={false} />
             <PolarAngleAxis style={{ fontSize: '11px' }} dataKey='kind' />
             <Radar dataKey='value' stroke="#FF0000" fill="#FF0000" fillOpacity={0.6} />
           </RadarChart>

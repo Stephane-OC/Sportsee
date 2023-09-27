@@ -1,30 +1,30 @@
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
-import getData from '../service/ApiService';
+import getData from "../service/ApiService";
 
 /* LineStats component is designed to render a LineChart visualization for average session durations. **
-**                                                                                                    **
-** Component expects to receive a prop named 'id' which is used to fetch relevant data                **
-** for LineChart from 'MockedService'.                                                                **
-**                                                                                                    **
-** Component uses React's useState and useEffect hooks to manage its local state and                  **
-** side effects respectively. 'id' prop is used as a dependency for useEffect hook                    **
-** to ensure that data fetching logic is executed whenever 'id' changes.                              **
-**                                                                                                    **
-** If data fetching is successful, component processes data to match                                  **
-** expected format for LineChart. Processed data is then used to render                               **
-** LineChart visualization within a ResponsiveContainer.                                              **
-**                                                                                                    **
-** In case of any errors during data fetching, component displays an error message                    **
-**                                                                                                    **
-** Main visual elements of component include:                                                         **
-** - A LineChart wrapped inside a ResponsiveContainer for responsive design.                          **
-** - XAxis, Tooltip, and Line elements from 'recharts' library to construct LineChart.                **
-** - A custom tooltip (CustomTooltip) to display session duration in minutes.                         **
-**                                                                                                    **
-** Component also defines PropTypes to ensure that expected 'id' prop is provided                     **
-** when component is used elsewhere in application.                                                   */
+ **                                                                                                    **
+ ** Component expects to receive a prop named 'id' which is used to fetch relevant data                **
+ ** for LineChart from 'MockedService'.                                                                **
+ **                                                                                                    **
+ ** Component uses React's useState and useEffect hooks to manage its local state and                  **
+ ** side effects respectively. 'id' prop is used as a dependency for useEffect hook                    **
+ ** to ensure that data fetching logic is executed whenever 'id' changes.                              **
+ **                                                                                                    **
+ ** If data fetching is successful, component processes data to match                                  **
+ ** expected format for LineChart. Processed data is then used to render                               **
+ ** LineChart visualization within a ResponsiveContainer.                                              **
+ **                                                                                                    **
+ ** In case of any errors during data fetching, component displays an error message                    **
+ **                                                                                                    **
+ ** Main visual elements of component include:                                                         **
+ ** - A LineChart wrapped inside a ResponsiveContainer for responsive design.                          **
+ ** - XAxis, Tooltip, and Line elements from 'recharts' library to construct LineChart.                **
+ ** - A custom tooltip (CustomTooltip) to display session duration in minutes.                         **
+ **                                                                                                    **
+ ** Component also defines PropTypes to ensure that expected 'id' prop is provided                     **
+ ** when component is used elsewhere in application.                                                   */
 
 const days = ["L", "M", "M", "J", "V", "S", "D"];
 
@@ -56,7 +56,20 @@ function LineStats({ id }) {
 
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
-      return <div className="line-label">{`${payload[0].value} min`}</div>;
+      return (
+        <div
+          className="bar-marker"
+          style={{
+            border: "1px solid #FFFFFF",
+            padding: "2px",
+            backgroundColor: "#FFFFFF",
+            color: "black",
+            minWidth: "80px",
+          }}
+        >
+          <p>{`${payload[0].value} min`}</p>
+        </div>
+      );
     }
   };
 
@@ -85,6 +98,8 @@ function LineStats({ id }) {
                 strokeWidth={3}
                 stroke="#FFFFFF"
                 style={{ opacity: 0.6 }}
+                dot={false} // Hide default dots for each data point on the line
+                activeDot={{ r: 5 }} // Display a dot with a radius of 5px when a data point is hovered
               />
             </LineChart>
           </ResponsiveContainer>
