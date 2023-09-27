@@ -95,7 +95,21 @@ function BarStats({ id }) {
               dataKey="day"
               tickFormatter={currentDay}
             />
-            <YAxis axisLine={false} tickLine={false} orientation="right" />
+            <YAxis
+              yAxisId="left"
+              axisLine={false}
+              tickLine={false}
+              orientation="left"
+              dataKey="calories"
+              hide={true}
+            />
+            <YAxis
+              yAxisId="right"
+              axisLine={false}
+              tickLine={false}
+              orientation="right"
+              dataKey="kilogram"
+            />
             <Tooltip content={CustomTooltip} />
             <Legend
               verticalAlign="top"
@@ -104,16 +118,20 @@ function BarStats({ id }) {
               iconType="circle"
             />
             <Bar
+              yAxisId="right"
               barSize={7}
               radius={[10, 10, 0, 0]}
               dataKey="kilogram"
               fill="#282D30"
+              name="Poids (kg)" // Added custom name for the legend label (Weight in kg)
             />
             <Bar
+              yAxisId="left"
               barSize={7}
               radius={[10, 10, 0, 0]}
               dataKey="calories"
               fill="#E60000"
+              name="Calories brûlées (kCal)" // Added custom name for the legend label (Burned Calories in kCal)
             />
           </BarChart>
         </ResponsiveContainer>

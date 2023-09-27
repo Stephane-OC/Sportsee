@@ -77,7 +77,6 @@ function FrontPage() {
     }
   }, [data, navigate, isLoading]);
 
-
   return (
     <>{!isLoading && (
       <div className='main'>
@@ -103,15 +102,15 @@ function FrontPage() {
               </article>
               <article className='nutritionInfo'>
                 <img src={Protein} alt='Proteines'/>
-                <p>{data.keyData.proteinCount + "mg"}<br/><span>Proteines</span></p>
+                <p>{data.keyData.proteinCount + "g"}<br/><span>Proteines</span></p>
               </article>
               <article className='nutritionInfo'>
                 <img src={carbs} alt='Glucides'/>
-                <p>{data.keyData.carbohydrateCount + "mg"}<br/><span>Glucides</span></p>
+                <p>{data.keyData.carbohydrateCount + "g"}<br/><span>Glucides</span></p>
               </article>
               <article className='nutritionInfo'>
                 <img src={lipids} alt='Lipides'/>
-                <p>{data.keyData.lipidCount + "mg"}<br/><span>Lipides</span></p>
+                <p>{data.keyData.lipidCount + "g"}<br/><span>Lipides</span></p>
               </article>
             </section>
 

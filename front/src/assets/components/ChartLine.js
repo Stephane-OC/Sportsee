@@ -56,7 +56,20 @@ function LineStats({ id }) {
 
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
-      return <div className="line-label">{`${payload[0].value} min`}</div>;
+      return (
+        <div
+          className="bar-marker"
+          style={{
+            border: "1px solid #FFFFFF",
+            padding: "2px",
+            backgroundColor: "#FFFFFF",
+            color: "black",
+            minWidth: "80px",
+          }}
+        >
+          <p>{`${payload[0].value} min`}</p>
+        </div>
+      );
     }
   };
 
@@ -85,6 +98,8 @@ function LineStats({ id }) {
                 strokeWidth={3}
                 stroke="#FFFFFF"
                 style={{ opacity: 0.6 }}
+                dot={false} // Hide default dots for each data point on the line
+                activeDot={{ r: 5 }} // Display a dot with a radius of 5px when a data point is hovered
               />
             </LineChart>
           </ResponsiveContainer>
